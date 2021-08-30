@@ -15,16 +15,15 @@ public class Library {
             System.out.println(library[i].getName() + " - " + library[i].getPages());
         }
         System.out.println();
-        Book tmp = new Book("", 0);
-        tmp = library[0];
+        Book tmp = library[0];
         library[0] = library[3];
         library[3] = tmp;
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < library.length; i++) {
             System.out.println(library[i].getName() + " - " + library[i].getPages());
         }
         System.out.println();
-        for (int i = 0; i < 4; i++) {
-            if (library[i].getName() == "Clean code") {
+        for (int i = 0; i < library.length; i++) {
+            if ("Clean code".equals(library[i].getName())) {
                 System.out.println(library[i].getName() + " - " + library[i].getPages());
             }
         }
