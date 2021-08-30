@@ -1,20 +1,15 @@
 package ru.job4j.oop.profession;
 
 public class Engineer extends Profession {
-    private String industry;
-    private String position;
-    private String location;
+    private final String industry;
+
+    public Engineer(String name, String surename, String education, String birthday, String industry) {
+        super(name, surename, education, birthday);
+        this.industry = industry;
+    }
 
     public String getIndustry() {
         return industry;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public String getLocation() {
-        return location;
     }
 
     public void makePlan(Project project) {

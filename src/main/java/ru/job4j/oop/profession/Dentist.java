@@ -1,7 +1,12 @@
 package ru.job4j.oop.profession;
 
 public class Dentist extends Doctor {
-    private Person nurse;
+    private final Person nurse;
+
+    public Dentist(String name, String surename, String education, String birthday, String location, Person nurse) {
+        super(name, surename, education, birthday, location);
+        this.nurse = nurse;
+    }
 
     public void doCleaning(Patient patient) {
     }

@@ -1,16 +1,11 @@
 package ru.job4j.oop.profession;
 
 public class Doctor extends Profession {
-    private String specialization;
-    private String position;
-    private String location;
+    private final String location;
 
-    public String getSpecialization() {
-        return specialization;
-    }
-
-    public String getPosition() {
-        return position;
+    public Doctor(String name, String surename, String education, String birthday, String location) {
+        super(name, surename, education, birthday);
+        this.location = location;
     }
 
     public String getLocation() {
