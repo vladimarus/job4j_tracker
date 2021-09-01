@@ -12,10 +12,8 @@ public class MagicBall {
         String out = "Может быть";
         if (answer == 0) {
             out = "Да";
-        } else {
-            if (answer == 1) {
-                out = "Нет";
-            }
+        } else if (answer == 1) {
+            out = "Нет";
         }
         System.out.println(out);
     }
