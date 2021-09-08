@@ -8,5 +8,4 @@ public class FactTest {
         int arg = -1;
         new Fact().calc(arg);
     }
-
 }
