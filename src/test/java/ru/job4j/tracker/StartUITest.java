@@ -56,8 +56,7 @@ public class StartUITest {
                 new String[]{"0", "1"}
         );
         Tracker tracker = new Tracker();
-        tracker.add(new Item("Name1"));
-        Item item = tracker.findAll()[0];
+        Item item = tracker.add(new Item("Name1"));
         UserAction[] actions = {
                 new ShowAction(out),
                 new ExitAction(out)
