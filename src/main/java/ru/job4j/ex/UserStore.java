@@ -32,10 +32,10 @@ public class UserStore {
             if (validate(user)) {
                 System.out.println("This user has an access");
             }
-        } catch (UserNotFoundException e) {
-            System.out.println("Пользователь не найден");
         } catch (UserInvalidException e) {
             System.out.println("Пользователь не валидный");
+        } catch (UserNotFoundException e) {
+            System.out.println("Пользователь не найден");
         }
     }
 }
