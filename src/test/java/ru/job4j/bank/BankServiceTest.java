@@ -16,21 +16,6 @@ public class BankServiceTest {
     }
 
     @Test
-    public void deleteExistingUser() {
-        User user = new User("3434", "Petr Arsentev");
-        BankService bank = new BankService();
-        bank.addUser(user);
-        assertThat(bank.deleteUser(user), is(true));
-    }
-
-    @Test
-    public void deleteNotExistingUser() {
-        User user = new User("3434", "Petr Arsentev");
-        BankService bank = new BankService();
-        assertThat(bank.deleteUser(user), is(false));
-    }
-
-    @Test
     public void whenEnterInvalidPassport() {
         User user = new User("3434", "Petr Arsentev");
         BankService bank = new BankService();
