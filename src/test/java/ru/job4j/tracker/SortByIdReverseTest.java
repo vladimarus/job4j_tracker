@@ -15,8 +15,15 @@ public class SortByIdReverseTest {
     public void whenSortByIdReverse() {
         Item first = new Item(0, "First");
         Item second = new Item(1, "Second");
-        List<Item> items = new ArrayList<>(Arrays.asList(first, second));
+        List<Item> items = new ArrayList<>(Arrays.asList(
+                first,
+                second));
+        List<Item> expected = new ArrayList<>(Arrays.asList(
+                second,
+                first));
         Collections.sort(items, new SortByIdReverse());
-        assertTrue(items.get(1).compareTo(items.get(0)) < 0);
+        for (int i = 0; i < items.size(); i++) {
+            assertSame(expected.get(i), items.get(i));
+        }
     }
 }
