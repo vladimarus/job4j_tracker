@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
 public class ItemTest {
@@ -22,8 +23,7 @@ public class ItemTest {
                 first,
                 second));
         Collections.sort(items);
-        for (int i = 0; i < items.size(); i++) {
-            assertSame(expected.get(i), items.get(i));
-        }
+        assertThat(expected.get(0), is(items.get(0)));
+        assertThat(expected.get(1), is(items.get(1)));
     }
 }
