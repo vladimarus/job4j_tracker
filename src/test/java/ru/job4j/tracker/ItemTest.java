@@ -23,7 +23,6 @@ public class ItemTest {
                 first,
                 second));
         Collections.sort(items);
-        assertThat(expected.get(0), is(items.get(0)));
-        assertThat(expected.get(1), is(items.get(1)));
+        assertThat(items, is(expected));
     }
 }
