@@ -2,7 +2,6 @@ package ru.job4j.tracker;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -16,12 +15,12 @@ public class ItemTest {
     public void whenSortById() {
         Item first = new Item(0, "First");
         Item second = new Item(1, "Second");
-        List<Item> items = new ArrayList<>(Arrays.asList(
+        List<Item> items = Arrays.asList(
                 second,
-                first));
-        List<Item> expected = new ArrayList<>(Arrays.asList(
+                first);
+        List<Item> expected = Arrays.asList(
                 first,
-                second));
+                second);
         Collections.sort(items);
         assertThat(items, is(expected));
     }
