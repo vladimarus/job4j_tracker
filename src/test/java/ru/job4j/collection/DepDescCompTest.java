@@ -9,7 +9,6 @@ import static org.hamcrest.Matchers.greaterThan;
 
 public class DepDescCompTest {
 
-//    @Test
     @Ignore
     public void compare() {
         int rsl = new DepDescComp().compare(
@@ -19,7 +18,6 @@ public class DepDescCompTest {
         assertThat(rsl, greaterThan(0));
     }
 
-//    @Test
     @Ignore
     public void whenUpDepartmentGoBefore() {
         int rsl = new DepDescComp().compare(
