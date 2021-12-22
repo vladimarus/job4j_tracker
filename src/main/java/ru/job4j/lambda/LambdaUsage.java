@@ -30,3 +30,4 @@ public class LambdaUsage {
         System.out.println(Arrays.toString(atts));
     }
 }
+
