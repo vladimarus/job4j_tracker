@@ -20,8 +20,8 @@ public class LambdaUsage {
             int res = Integer.compare(
                     right.getName().length(),
                     left.getName().length());
-            System.out.println(right.getName().length() + " < "
-                    + left.getName().length() + ": "
+            System.out.println(left.getName().length() + " < "
+                    + right.getName().length() + ": "
                     + (res < 0));
             return res;
         };
