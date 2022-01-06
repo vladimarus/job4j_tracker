@@ -12,12 +12,25 @@ public class Student {
         this.surname = surname;
     }
 
+    public Student(String surname, int score) {
+        this.score = score;
+        this.surname = surname;
+    }
+
     public int getScore() {
         return score;
     }
 
     public String getSurname() {
         return surname;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{"
+                + "score=" + score
+                + ", surname='" + surname + '\''
+                + '}';
     }
 
     @Override
