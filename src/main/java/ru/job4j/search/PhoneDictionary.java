@@ -14,11 +14,11 @@ public class PhoneDictionary {
      * Вернуть список всех пользователей, который содержат key в любых полях.
      *
      * @param key Ключ поиска.
-     * @return Список подощедщих пользователей.
+     * @return Список подошедших пользователей.
      */
     public ArrayList<Person> findByKey(String key) {
         ArrayList<Person> result = new ArrayList<>();
-        for (Person person : persons) {
+        for (var person : persons) {
             if (person.getName().contains(key)
                     || person.getSurname().contains(key)
                     || person.getPhone().contains(key)
@@ -46,7 +46,7 @@ public class PhoneDictionary {
 
         Predicate<Person> combine = nameCheck.or(sNameCheck.or(phoneCheck.or(addressCheck)));
         ArrayList<Person> result = new ArrayList<>();
-        for (Person person : persons) {
+        for (var person : persons) {
             if (combine.test(person)) {
                 result.add(person);
             }
