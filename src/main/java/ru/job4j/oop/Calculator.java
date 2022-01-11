@@ -12,19 +12,19 @@ public class Calculator {
         return X * a;
     }
 
-    public static int minus(int var) {
-        return var - X;
+    public static int minus(int argument) {
+        return argument - X;
     }
 
-    public double divide(int var) {
-        return (double) var / X;
+    public double divide(int argument) {
+        return (double) argument / X;
     }
 
-    public double sumAllOperation(int var) {
-        return sum(var)
-                + multiply(var)
-                + minus(var)
-                + divide(var);
+    public double sumAllOperation(int argument) {
+        return sum(argument)
+                + multiply(argument)
+                + minus(argument)
+                + divide(argument);
     }
 
     public static void main(String[] args) {
