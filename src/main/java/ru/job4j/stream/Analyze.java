@@ -31,8 +31,7 @@ public class Analyze {
                 .collect(Collectors.groupingBy(
                         Subject::getName,
                         LinkedHashMap::new,
-                        Collectors.averagingDouble(Subject::getScore)
-                ))
+                        Collectors.averagingDouble(Subject::getScore)))
                 .entrySet().stream()
                 .map(e -> new Tuple(e.getKey(), e.getValue()))
                 .collect(Collectors.toList());
@@ -53,8 +52,7 @@ public class Analyze {
         return stream
                 .flatMap(p -> p.getSubjects().stream())
                 .collect(Collectors.groupingBy(Subject::getName,
-                        Collectors.summingDouble(Subject::getScore)
-                ))
+                        Collectors.summingDouble(Subject::getScore)))
                 .entrySet().stream()
                 .map(e -> new Tuple(e.getKey(), e.getValue()))
                 .max(Comparator.comparingDouble(Tuple::getScore))
