@@ -52,15 +52,12 @@ public class BankService {
      *
      * @param passport паспорт искомого клиента
      * @return если учетная запись клиента существует, возврвщвает ее; в
-     * противном случае возвращает null
+     * противном случае возвращает Optional.empty()
      */
     public Optional<User> findByPassport(String passport) {
-        User res = users.keySet().stream()
+        return users.keySet().stream()
                 .filter(user -> user.getPassport().equals(passport))
-                .findFirst()
-                .orElse(null);
-
-        return res == null ? Optional.empty() : Optional.of(res);
+                .findFirst();
     }
 
     /**
@@ -70,7 +67,7 @@ public class BankService {
      * @param passport  паспорт владельца счета
      * @param requisite реквизит счета
      * @return Возвращает банковский счет клиента. Если клиент не найден или
-     * счет не существует - вернется null
+     * счет не существует - вернется Optional.empty()
      */
     public Optional<Account> findByRequisite(String passport, String requisite) {
         Optional<User> user = findByPassport(passport);
